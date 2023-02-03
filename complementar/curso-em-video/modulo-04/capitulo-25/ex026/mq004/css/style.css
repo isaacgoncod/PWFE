@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* Todas as demais midias */
+/* Typical Device Breakpoints
+pequenas telas: até 600px
+Celular: 600px a 768px 
+Tablet: 768px a 992px
+Desktop: 992px a 1200px
+Grandes telas: acima de 1200px*/
+@media print {
+  * {
+    font-family: "Courier New", Courier, monospace;
+  }
+  main {
+    border: 2px solid black;
+  }
+  main::after {
+    content: "Teste de impressão";
+    text-decoration: overline;
+  }
+  main h1 {
+    text-shadow: none;
+    color: #000;
+  }
+  #phone {
+    display: none;
+  }
+  #tablet {
+    display: none;
+  }
+  #print {
+    display: block;
+  }
+  #pc {
+    display: none;
+  }
+  #tv {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    background-image: url("../assets/back-tablet.jpg");
+  }
+  #phone {
+    display: none;
+  }
+  #tablet {
+    display: block;
+  }
+  #print {
+    display: none;
+  }
+  #pc {
+    display: none;
+  }
+  #tv {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  body {
+    background-image: url("../assets/back-pc.jpg");
+  }
+  #phone {
+    display: none;
+  }
+  #tablet {
+    display: none;
+  }
+  #print {
+    display: none;
+  }
+  #pc {
+    display: block;
+  }
+  #tv {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("../assets/back-tv.jpg");
+  }
+  #phone {
+    display: none;
+  }
+  #tablet {
+    display: none;
+  }
+  #print {
+    display: none;
+  }
+  #pc {
+    display: none;
+  }
+  #tv {
+    display: block;
+  }
+}

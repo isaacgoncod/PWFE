@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --cor0: hsl(158, 36%, 37%);
+  --cor1: hsl(30, 38%, 92%);
+  --cor2: hsl(212, 21%, 14%);
+  --cor3: hsl(228, 12%, 48%);
+  --cor4: hsl(0, 0%, 100%);
+
+  --font-padrao: "Fraunces", Arial, Verdana, Helvetica, sans-serif;
+  --font-destaque: "Montserrat", cursive;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--cor1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+section {
+  background-color: var(--cor4);
+  padding: 55px;
+  border-radius: 0px 10px 10px 0px;
+}
+section h4 {
+  font-family: var(--font-destaque);
+  color: var(--cor3);
+  font-weight: 500;
+  letter-spacing: 8px;
+  margin-bottom: 30px;
+}
+section  h1 {
+  font-family: var(--font-padrao);
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom:   30px;
+}
+section  p {
+  font-size: 1rem;
+  font-family: var(--font-destaque);
+  font-weight: 500;
+  color: var(--cor3);
+  line-height: 2;
+  text-align: left;
+}
+.preco {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+.preco h1{
+  margin: 0;
+  color: var(--cor0);
+}
+.preco p{
+  margin-left: 20px;
+  color: var(--cor3);
+  text-decoration: line-through;
+}
+a button{
+  width: 100%;
+  height: 55px;
+  border-radius: 10px;
+  border: none;
+  color: var(--cor4);
+  background-color: var(--cor0);
+  font-weight: 700;
+  font-size: 1rem;
+}
+a button:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+a button img{
+  margin-right: 10px;
+}
+@media (max-width: 800px) {
+  main {
+    margin: 40px;
+    grid-template-columns: 1fr;
+  }
+  section {
+    border-radius: 0px 0px 10px 10px;
+  }
+  picture img {
+    border-radius: 10px 10px 0px 0px;
+  }
+}

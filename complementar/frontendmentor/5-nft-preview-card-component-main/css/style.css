@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d192b;
+}
+section{
+  width: 420px;
+  height: 700px;
+  padding: 30px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+  box-shadow: 0px 20px 0px 25px #09142767;
+}
+.image{
+  width: 100%;
+  height: 56%;
+  position: relative;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 15px;
+}
+.view{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 247, 0.2);
+  position: absolute;
+  top: 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.view:hover{
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s;
+}
+.view img{
+  width: 100px;
+  height: 100px;
+}
+.introducao{
+  width: 100%;
+  height: 20%;
+  font-family: outfit;
+  color: #fff;
+}
+.introducao h1{
+  margin-top: 30px;
+  letter-spacing: 1px;
+}
+.introducao h1:hover{
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+.introducao p{
+  color: hsl(215, 51%, 70%);
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+.dados{
+  width: 100%;
+  height: 10%;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  display: flex;
+  justify-content: space-between;
+}
+.saldo{
+  display: flex;
+  align-items: center;
+  color: hsl(178, 100%, 50%);
+  font-family: outfit;
+  font-weight: 1.2rem;
+  letter-spacing: 1px;
+
+}
+.saldo img{
+  transition: 1s;
+}
+.saldo img:hover{
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+.saldo p{
+  margin-left: 10px;
+}
+.tempo{
+  display: flex;
+  align-items: center;
+  color: hsl(215, 51%, 70%);
+  font-family: outfit;
+  font-weight: 1.2rem;
+  letter-spacing: 1px;
+}
+.tempo p{
+  margin-left: 10px;
+}
+.tempo img{
+  transition: 1s;
+}
+.tempo img:hover{
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+.avatar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.avatar img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+}
+.avatar img:hover{
+  cursor: pointer;
+  border: 1.5px solid hsl(178, 100%, 50%);
+}
+.avatar p {
+  margin-left: 15px;
+  color: hsl(215, 51%, 70%);
+  font-family: outfit;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+span{
+  color: #fff;
+}
+span:hover{
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}

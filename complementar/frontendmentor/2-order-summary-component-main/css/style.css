@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display";
+}
+body {
+  background-image: url('/order-summary-component-main/images/pattern-background-desktop.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1,
+h4 {
+  color: #1f2f56;
+}
+span {
+  font-weight: 700;
+}
+.container {
+  width: 450px;
+  height: 700px;
+  border-radius: 10px;
+  background-color: #f5f7ff;
+  color: #7280a7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 25px 40px #7280a75e;
+}
+.container > img {
+  width: 100%;
+  height: 40%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.title {
+  width: 80%;
+  height: 25%;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+}
+.title p {
+  margin-top: 15px;
+  line-height: 25px;
+}
+.plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+}
+.plan > div {
+  display: grid;
+  margin-right: 100px;
+  margin-left: 20px;
+}
+.buttons {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.buttons button {
+  width: 80%;
+  height: 23%;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.buttons button:hover {
+  cursor: pointer;
+}
+#button1 {
+  background-color: #3829e0;
+  box-shadow: 0px 12px 10px #3829e02f;
+  letter-spacing: 1px;
+}
+#button2 {
+  color: #7280a7;
+  background-color: #f5f7ff;
+}

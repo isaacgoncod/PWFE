@@ -1,0 +1,14 @@
+.banner {
+  width: 800px;
+  height: 500px;
+  background-image: url("");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.banner h1 ,p {
+  color:#fff;
+  font: bold;
+  font-size: 2rem;
+}

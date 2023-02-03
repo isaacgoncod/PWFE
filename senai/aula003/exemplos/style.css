@@ -1,0 +1,21 @@
+/* .m1 {
+  color: red;
+}
+.m2 {
+  color: blue;
+} */
+
+.light {
+  background-color: #ffff;
+}
+
+.light h1 {
+  color: #a3a3a3;
+}
+.dark {
+  background-color: #353535;
+}
+
+.dark h1 {
+  color: #f5f5f5f5;
+}

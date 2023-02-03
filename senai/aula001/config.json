@@ -1,0 +1,47 @@
+{
+  "editor.fontFamily": "source code pro",
+  "editor.fontSize": 18,
+  "editor.lineHeight": 26,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "window.zoomLevel": 0,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.activityBar.visible": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "explorer.confirmDragAndDrop": false,
+  "diffEditor.renderSideBySide": true,
+  "editor.formatOnSave": true,
+  "html.autoClosingTags": false,
+  "editor.autoIndent": "advanced",
+  "editor.colorDecorators": true,
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "files.associations": {
+    "*.js": "javascriptreact"
+  },
+  "editor.minimap.renderCharacters": false,
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "off",
+  "breadcrumbs.icons": false,
+  "outline.icons": false,
+  "color-highlight.markerType": "dot-before",
+  "editor.renderWhitespace": "selection",
+  "workbench.statusBar.visible": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.sortOrder": "type",
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "files.autoSave": "afterDelay",
+  "window.autoDetectHighContrast": false,
+  "workbench.colorTheme": "Origamid Next",
+  "emmet.excludeLanguages": ["markdown", "css"],
+  "explorer.confirmDelete": false,
+  "tabnine.experimentalAutoImports": true
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links</title>
+  <style>
+    body{
+      font-family: 'Courier New', Courier, monospace;
+    }
+    a {
+      color: red;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    /* pseudo-clase */
+    a:visited{
+      color: darkred;
+    }
+    a:hover{
+      color: #000;
+      text-decoration: underline;
+    }
+    a:active{
+      color: green;
+    }
+    /* pseudo-element */
+    a::after{
+      content: '[link]';
+      text-decoration: none;
+      font-weight: normal;
+      color: #a2a2a2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Personalizando links</h1>
+  <ul>
+    <li><a href="" target="_blank">Repositorio do GItHub</a></li>
+    <li><a href="" target="_blank">Canal do youtube</a></li>
+    <li><a href="" target="_blank">linkedin</a></li>
+  </ul>
+</body>
+</html>
