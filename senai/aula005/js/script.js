@@ -1,5 +1,4 @@
 const tabelaPrincipal = document.querySelector("#tabela-principal");
-const tabelaVendas = document.querySelector("#tabela-vendas");
 
 const dados = [
   {
@@ -24,7 +23,7 @@ const dados = [
   },
   {
     funcionario: "Cecilia Martins",
-    matricula: "124578",
+    matricula: "124576",
     setor: "Eletronico",
     comissao: 5,
     vendas: [
@@ -64,6 +63,9 @@ const dados = [
   },
 ];
 
+let valorTotal = 0;
+var comissao = 0;
+
 dados.forEach((dado) => {
   let tr = document.createElement("tr");
 
@@ -76,21 +78,22 @@ dados.forEach((dado) => {
   let tdSetor = document.createElement("td");
   tdSetor.innerHTML = dado.setor;
 
+  for (let i = 0; i < dado.vendas.length; i++) {
+    valorTotal = valorTotal + dado.vendas[i].valor;
+    comissao = valorTotal * (dado.comissao / 100);
+  }
+  
+  let tdTotalVenda = document.createElement("td");
+  tdTotalVenda.innerHTML = "R$ " + valorTotal.toFixed(2);
+
   let tdComissao = document.createElement("td");
-  tdComissao.innerHTML = dado.comissao;
+  tdComissao.innerHTML = "R$ " + comissao.toFixed(2);
 
   tabelaPrincipal.appendChild(tr);
   tr.appendChild(tdMatricula);
   tr.appendChild(tdFuncionario);
   tr.appendChild(tdSetor);
   tr.appendChild(tdComissao);
+  tr.appendChild(tdTotalVenda);
+  valorTotal = 0;
 });
-
-let valorTotal = 0;
-for (let i = 0; i < dados.vendas; i++) {
-  valorTotal += dados.vendas.valor[i];
-}
-let tdTotalVenda = document.createElement("td");
-tdTotalVenda.innerHTML = valorTotal;
-
-console.log(valorTotal);
