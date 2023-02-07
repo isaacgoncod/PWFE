@@ -1,4 +1,6 @@
 const tabelaPrincipal = document.querySelector("#tabela-principal");
+const inputFuncionario = document.querySelector("#id-matricula");
+const inputValor = document.querySelector("#id-valor");
 
 const dados = [
   {
@@ -64,7 +66,7 @@ const dados = [
 ];
 
 let valorTotal = 0;
-var comissao = 0;
+let comissao = 0;
 
 dados.forEach((dado) => {
   let tr = document.createElement("tr");
@@ -78,11 +80,14 @@ dados.forEach((dado) => {
   let tdSetor = document.createElement("td");
   tdSetor.innerHTML = dado.setor;
 
+  if (inputFuncionario.value == dado.matricula) {
+    valorTotal = 1000;
+  }
   for (let i = 0; i < dado.vendas.length; i++) {
     valorTotal = valorTotal + dado.vendas[i].valor;
     comissao = valorTotal * (dado.comissao / 100);
   }
-  
+
   let tdTotalVenda = document.createElement("td");
   tdTotalVenda.innerHTML = "R$ " + valorTotal.toFixed(2);
 
@@ -95,5 +100,6 @@ dados.forEach((dado) => {
   tr.appendChild(tdSetor);
   tr.appendChild(tdComissao);
   tr.appendChild(tdTotalVenda);
+
   valorTotal = 0;
 });
