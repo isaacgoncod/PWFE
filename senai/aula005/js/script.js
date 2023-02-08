@@ -1,8 +1,4 @@
-const tabelaPrincipal = document.querySelector("#tabela-principal");
-const inputFuncionario = document.querySelector("#id-matricula");
-const inputValor = document.querySelector("#id-valor");
-
-const dados = [
+const data = [
   {
     funcionario: "Vitoria da Cruz",
     matricula: "010203",
@@ -65,41 +61,72 @@ const dados = [
   },
 ];
 
-let valorTotal = 0;
-let comissao = 0;
+const table = document.querySelector("tbody");
+const diaVenda = document.querySelector("#data");
+const valorVenda = document.querySelector("#valor");
+const funcionarios = document.querySelector("#funcionarios");
 
-dados.forEach((dado) => {
-  let tr = document.createElement("tr");
+function preencherTabela() {
+  table.innerHTML = "";
 
-  let tdMatricula = document.createElement("td");
-  tdMatricula.innerHTML = dado.matricula;
+  for (let i = 0; i < data.length; i++) {
+    let linha = document.createElement("tr");
 
-  let tdFuncionario = document.createElement("td");
-  tdFuncionario.innerHTML = dado.funcionario;
+    let matricula = document.createElement("td");
+    let nome = document.createElement("td");
+    let setor = document.createElement("td");
+    let vendas = document.createElement("td");
+    let comissao = document.createElement("td");
 
-  let tdSetor = document.createElement("td");
-  tdSetor.innerHTML = dado.setor;
+    let info = data[i];
 
-  if (inputFuncionario.value == dado.matricula) {
-    valorTotal = 1000;
+    matricula.innerHTML = info.matricula;
+    nome.innerHTML = info.funcionario;
+    setor.innerHTML = info.setor;
+
+    let total = 0;
+
+    for (let j = 0; j < info.vendas.length; j++) {
+      total += info.vendas[j].valor;
+    }
+
+    vendas.innerHTML = `R$ ${total.toFixed(2)}`;
+
+    let com = total * (info.comissao / 100);
+
+    comissao.innerHTML = `R$ ${com.toFixed(2)}`;
+
+    linha.appendChild(matricula);
+    linha.appendChild(nome);
+    linha.appendChild(setor);
+    linha.appendChild(vendas);
+    linha.appendChild(comissao);
+
+    table.appendChild(linha);
   }
-  for (let i = 0; i < dado.vendas.length; i++) {
-    valorTotal = valorTotal + dado.vendas[i].valor;
-    comissao = valorTotal * (dado.comissao / 100);
+}
+
+function listarFuncionario() {
+  for (let i = 0; i < data.length; i++) {
+    let option = document.createElement("option");
+    option.value = i;
+    option.innerHTML = data[i].funcionario;
+    funcionarios.appendChild(option);
   }
+}
 
-  let tdTotalVenda = document.createElement("td");
-  tdTotalVenda.innerHTML = "R$ " + valorTotal.toFixed(2);
+function cadastrar() {
+  let pos = Number(funcionarios.value);
 
-  let tdComissao = document.createElement("td");
-  tdComissao.innerHTML = "R$ " + comissao.toFixed(2);
+  let venda = {
+    data: diaVenda.value,
+    valor: Number(valorVenda.value),
+  };
 
-  tabelaPrincipal.appendChild(tr);
-  tr.appendChild(tdMatricula);
-  tr.appendChild(tdFuncionario);
-  tr.appendChild(tdSetor);
-  tr.appendChild(tdComissao);
-  tr.appendChild(tdTotalVenda);
+  data[pos].vendas.push(venda);
 
-  valorTotal = 0;
-});
+  preencherTabela();
+}
+
+preencherTabela();
+listarFuncionario();

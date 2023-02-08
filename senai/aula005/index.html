@@ -1,39 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Tabela</title>
+    <title>Document</title>
   </head>
   <body>
-    <table>
+    <table border="1">
       <thead>
         <tr>
           <th>Matrícula</th>
           <th>Nome</th>
           <th>Setor</th>
-          <th>Comissão Ganha</th>
           <th>Total de Vendas</th>
+          <th>Comissão Ganha</th>
         </tr>
       </thead>
-      <tbody id="tabela-principal"></tbody>
+      <tbody></tbody>
     </table>
-    <!-- formulario -->
-    <form action="" method="get">
-      <div id="div-matricula">
-        <label for="id-matricula">matricula:</label>
-        <input type="text" id="id-matricula" value="010203" />
-      </div>
-      <div id="div-valor">
-        <label for="id-valor">valor:</label>
-        <input type="text" id="id-valor" value="2000" />
-      </div>
-      <div>
-        <input type="submit" value="Enviar" />
-      </div>
-    </form>
-    <script src="./js/script.js"></script>
+    <hr />
+    <div>
+      <select id="funcionarios"></select>
+      <input id="data" placeholder="Data" />
+      <input id="valor" placeholder="Valor" />
+      <button onclick="cadastrar()">Cadastrar</button>
+    </div>
   </body>
+  <script src="./js/script.js"></script>
 </html>
