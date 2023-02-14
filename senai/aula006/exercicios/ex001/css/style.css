@@ -6,28 +6,36 @@
 }
 body {
   width: 100vw;
-  padding: 40px;
 }
 .model {
   display: none;
 }
+.dados {
+  width: 100%;
+  padding: 20px;
+}
 .dados div {
   margin-bottom: 10px;
 }
-.dados input {
+.dados input{
+  border-radius: 5px;
   outline: none;
+  border: 1px solid;
+}
+#lancheQtd,
+#bebidaQtd {
+  width: 50px;
 }
 button {
   padding: 5px;
   border-radius: 5px;
   margin-bottom: 15px;
   border: none;
-  background-color: #fff;
-  box-shadow: 2px 2px 2px 2px #e5e5e5;
+  font-weight: bold;
 }
 button:hover {
   cursor: pointer;
-  background-color: #a5a5a57c;
+  box-shadow: 2px 2px 2px #a3a3a3;
 }
 .pedidos {
   width: 100%;

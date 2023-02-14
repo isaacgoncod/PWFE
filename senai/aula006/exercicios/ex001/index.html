@@ -11,11 +11,11 @@
     <div class="dados">
       <div>
         <label for="id-nome">Nome:</label>
-        <input type="text" id="id-nome" />
+        <input type="text" id="id-nome" autocomplete="on" />
       </div>
       <div>
         <label for="id-endereco">Endereço:</label>
-        <input type="text" id="id-endereco" />
+        <input type="text" id="id-endereco" autocomplete="on" />
       </div>
       <div>
         <label for="id-lanche">Lanches:</label>
@@ -25,6 +25,29 @@
           <option value="X-Salada">X-Salada</option>
           <option value="X-Tijolo">X-Tijolo</option>
         </select>
+        <input
+          type="number"
+          placeholder="Qtd"
+          id="lancheQtd"
+          value="1"
+          min="1"
+        />
+      </div>
+      <div>
+        <label for="id-bebida">Bebidas:</label>
+        <select name="bebidas" id="id-bebida">
+          <option value="Coca-Cola">Coca-Cola(300ml)</option>
+          <option value="Guaraná">Guaraná(2L)</option>
+          <option value="Del Valle">Del Valle Uva(300ml)</option>
+          <option value="Sprite">Sprite(1,5L)</option>
+        </select>
+        <input
+          type="number"
+          placeholder="Qtd"
+          id="bebidaQtd"
+          value="1"
+          min="1"
+        />
       </div>
       <div>
         <label for="id-pagamento">Formas de Pagamento:</label>
@@ -38,7 +61,7 @@
       </div>
       <button onclick="cadastrar()">Cadastrar</button>
     </div>
-    <hr />
+    <hr>
     <div class="pedidos">
       <div id="cozinha">
         <h2>Pedidos: Cozinha</h2>
@@ -46,6 +69,7 @@
           <p id="nome"></p>
           <p id="endereco"></p>
           <p id="lanche"></p>
+          <p id="bebida"></p>
           <p id="pagamento"></p>
           <p id="data"></p>
           <button>Enviar</button>
