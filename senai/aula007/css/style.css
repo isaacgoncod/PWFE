@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000083;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info {
+  width: 200px;
+  height: 200px;
+  background-color: #efefef;
+  border-radius: 7px;
+}
+.show {
+  display: none;
+}
+.pcidade {
+  cursor: pointer;
+}
