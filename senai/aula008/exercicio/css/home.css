@@ -1,0 +1,27 @@
+@import url("./header.css");
+
+#hello {
+  margin-left: 5rem;
+}
+main {
+  width: 100vw;
+  display: flex;
+  padding: 50px;
+}
+.card-control {
+  width: 200px;
+  height: 100px;
+  margin-left: 50px;
+  border: 1px solid #000;
+  border-radius: 7px;
+  padding: 20px;
+}
+.card-control p {
+  margin-bottom: 5px;
+}
+.card-control button{
+  margin-top: 7px;
+  margin-left: 100px;
+  padding: 5px;
+  border-radius: 7px;
+}

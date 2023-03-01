@@ -1,5 +1,5 @@
 const inpMatricula = document.querySelector("#matricula");
-const inpSenha = documet.querySelector("#senha");
+const inpSenha = document.querySelector("#senha");
 
 const base = [
   {
@@ -16,7 +16,7 @@ const base = [
     salario: 2570.8,
     id: 2,
   },
-   {
+  {
     nome: "admin",
     matricula: 123456,
     senha: "admin",
