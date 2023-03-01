@@ -19,9 +19,14 @@ main {
 .card-control p {
   margin-bottom: 5px;
 }
-.card-control button{
+.card-control button {
   margin-top: 7px;
   margin-left: 100px;
   padding: 5px;
   border-radius: 7px;
+  border: 1px solid #000;
+}
+.card-control button:hover {
+  background-color: #c3c3c3;
+  cursor: pointer;
 }
