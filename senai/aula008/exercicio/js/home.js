@@ -61,9 +61,13 @@ const data = base.find((casa) => {
 
 if (data != undefined) {
   data.responsavel.forEach((casa) => {
-    criarCard(casa.cod, casa.endereco, casa.valor, casa.status);
+    criarCard(casa.cod, casa.endereco, casa.valor, casa.comissao);
+
+    let 
   });
 }
+
+var comissaoTotal = 0;
 
 function criarCard(cod, endereco, valor) {
   let card = document.createElement("div");
@@ -83,6 +87,8 @@ function criarCard(cod, endereco, valor) {
   card.className = "card-control";
 
   btn.addEventListener("click", () => {
+    comissaoTotal += valor;
+
     card.remove();
   });
 
