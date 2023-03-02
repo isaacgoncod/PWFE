@@ -72,17 +72,26 @@ function criarCard(cod, endereco, valor, comissao) {
   let pendereco = document.createElement("p");
   let pvalor = document.createElement("p");
   let btn = document.createElement("button");
+  let btnDelete = document.createElement("button");
 
   pcod.innerHTML = "<strong>Cod: </strong>" + cod;
   pendereco.innerHTML = endereco;
   pvalor.innerHTML = formatarMoeda(valor);
   btn.innerHTML = "Vendido";
+  btnDelete.innerHTML = "Excluir";
+
+  btnDelete.style.display = "none";
 
   btn.addEventListener("click", () => {
     comissaoTotal += Number(valor) * (comissao / 100);
     pcomissao.innerHTML = " " + formatarMoeda(comissaoTotal);
     card.style.background = "#63E17C";
     btn.remove();
+    btnDelete.style.display = "block";
+  });
+
+  btnDelete.addEventListener("click", () => {
+    card.remove();
   });
 
   card.className = "card-control";
@@ -91,6 +100,7 @@ function criarCard(cod, endereco, valor, comissao) {
   card.appendChild(pendereco);
   card.appendChild(pvalor);
   card.appendChild(btn);
+  card.appendChild(btnDelete);
 
   main.appendChild(card);
 }
