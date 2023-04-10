@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <title>Temperatura</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Weather</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="form">
+        <div class="form-control">
+          <label for="city-name">Procure sua cidade:</label>
+          <input type="text" id="city-name" />
+          <button onclick="getTemp()">Buscar</button>
+        </div>
+      </div>
+      <div class="info none"></div>
+    </main>
+  </body>
+  <script src="../js/index.js"></script>
+</html>
